@@ -105,6 +105,11 @@ app.post('/getUsers', function(req, res) {
   }, 1000);
 })
 
+app.get('/getAll', function(req, res) {
+  console.log('query: ', req.query);
+  res.send(data);
+})
+
 app.listen(port, hostName, function() {
   console.log(`服务器运行在 http://${hostName}:${port}`);
 });
